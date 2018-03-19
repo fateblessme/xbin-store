@@ -6,13 +6,13 @@ dubbox:
     owner: binux
   registry: 
     protocol: zookeeper
-    address: 192.168.125.128:2181
+    address: zookeeper://192.168.9.32:2181?backup=192.168.9.31:8181,192.168.9.32:8181,192.168.9.33:8181
   annotation:
     package: cn.binux.search
   protocol:
     name: dubbo
     port: 20882
-    host: 192.168.125.1
+    host: 192.168.31.187
     timeout: 30000
     threadpool: fixed
     threads: 500
@@ -25,10 +25,10 @@ dubbox:
     username: admin
     password: admin
 druid:
-    url: jdbc:mysql://localhost:3306/xbin_store?characterEncoding=utf-8
+    url: jdbc:mysql://192.168.9.32:3306/xbin_store?characterEncoding=utf-8
     driver-class: com.mysql.jdbc.Driver
     username: root
-    password: OZo+t9QET+ctzd5Esn9q0GJP5hXtWWIKEsX8c4/w6z4C4AnxrwpvySNgBS89XdazOavjXXZp0oeZtQ3P9lLGEA==
+    password: lCzd9geWAuAuJtLhpaG/J+d28H8KiMFAWopxXkYpMNdUai6Xe/LsPqMQeg5MIrmvtMa+hzycdRhWs29ZUPU1IQ==
     initial-size: 1
     min-idle: 1
     max-active: 20
@@ -68,7 +68,7 @@ pagehelper:
 spring:
   data:
     solr:
-      host: http://192.168.125.131:8080/solr/collection1
+      host: http://192.168.9.33:8983/solr/#/~collections/gettingstarted
 #      zkHost:
       repositories:
         enabled: false

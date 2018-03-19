@@ -24,5 +24,9 @@ public class ManageUserVO extends TbManageUser {
         return format.format(this.getCreated()).toString() + "加入公司";
     }
 
+	public void setJoinus(String joinus) {
+		this.joinus = joinus;
+	}
+
 
 }

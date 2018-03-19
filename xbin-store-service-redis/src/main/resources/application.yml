@@ -6,13 +6,13 @@ dubbox:
     owner: binux
   registry: 
     protocol: zookeeper
-    address: 192.168.125.128:2181
+    address: zookeeper://192.168.9.32:2181?backup=192.168.9.31:8181,192.168.9.32:8181,192.168.9.33:8181
   annotation:
     package: cn.binux.redis
   protocol:
     name: dubbo
     port: 20881
-    host: 192.168.125.1
+    host: 192.168.31.187
     timeout: 30000
     threadpool: fixed
     threads: 500
@@ -27,7 +27,9 @@ dubbox:
 
 # REDIS (RedisProperties)
 redis:
-  cluster: false
-  single-host: 192.168.125.133
-  single-port: 6379
+  cluster: true
+  clusterNodes: 192.168.9.31:7001,192.168.9.31:7002,192.168.9.31:7003,192.168.9.31:7004,192.168.9.31:7005,192.168.9.31:7006,
+#  single-host: 192.168.9.31
+#  single-port: 6379
+#  single-port: 7001
   password:

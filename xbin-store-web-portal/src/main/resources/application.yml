@@ -6,7 +6,7 @@ dubbox:
     owner: binux
   registry:
     protocol: zookeeper
-    address: 192.168.125.128:2181
+    address: zookeeper://192.168.9.32:2181?backup=192.168.9.31:8181,192.168.9.32:8181,192.168.9.33:8181
   annotation:
     package: cn.binux.portal.controller
   monitor:
